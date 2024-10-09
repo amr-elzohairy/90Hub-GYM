@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hubmaster/core/helpers/spacing.dart';
-import 'package:hubmaster/core/routing/app_routerr.dart';
+import 'package:hubmaster/core/routing/app_router.dart';
 
 import 'package:hubmaster/core/widgets/custom_button.dart';
 import 'package:hubmaster/features/on_boarding/ui/widgets/bottom_bevel_clipper.dart';
@@ -59,7 +59,7 @@ class ScreenThree extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 100.h),
             child: CustomButton(
               onPressed: () {
-                GoRouter.of(context).push(AppRouter.kGenderSelection);
+                GoRouter.of(context).push(AppRouter.kLoginView);
               },
               text: 'Start Now',
             ),

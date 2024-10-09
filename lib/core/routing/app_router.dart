@@ -1,5 +1,9 @@
 import 'package:go_router/go_router.dart';
+import 'package:hubmaster/features/forgotpassword/ui/forgot_password_view.dart';
+import 'package:hubmaster/features/home/ui/home_view.dart';
+import 'package:hubmaster/features/login/ui/login.dart';
 import 'package:hubmaster/features/on_boarding/ui/on_boarding_screen.dart';
+import 'package:hubmaster/features/signup/ui/sign_up_view.dart';
 import 'package:hubmaster/features/user_infos/ui/activity_level_selection.dart';
 import 'package:hubmaster/features/user_infos/ui/age_selection.dart';
 import 'package:hubmaster/features/user_infos/ui/goal_selection.dart';
@@ -14,6 +18,10 @@ abstract class AppRouter {
   static const kHeightSelection = '/heightSelection';
   static const kGoalSeleciton = '/goalSeleciton';
   static const kActivitySelection = '/activitySelection';
+  static const kLoginView = '/loginView';
+  static const kHomeView = '/homeView';
+  static const kSignUpView = '/signUpView';
+  static const kForgotPassword = '/forgotPassword';
   static final GoRouter router = GoRouter(
     routes: [
       GoRoute(
@@ -43,6 +51,22 @@ abstract class AppRouter {
       GoRoute(
         path: kActivitySelection,
         builder: (context, state) => const ActivitySelection(),
+      ),
+      GoRoute(
+        path: kLoginView,
+        builder: (context, state) => const LoginView(),
+      ),
+      GoRoute(
+        path: kHomeView,
+        builder: (context, state) => const HomeView(),
+      ),
+      GoRoute(
+        path: kSignUpView,
+        builder: (context, state) => const SignUpView(),
+      ),
+      GoRoute(
+        path: kForgotPassword,
+        builder: (context, state) => const ForgotPasswordView(),
       ),
     ],
   );
