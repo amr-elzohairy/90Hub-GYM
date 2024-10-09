@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hubmaster/core/routing/app_routerr.dart';
+import 'package:hubmaster/core/routing/app_router.dart';
 import 'package:hubmaster/core/themes/app_colors.dart';
 import 'package:hubmaster/features/user_infos/ui/widgets/next_and_back_row.dart';
 
