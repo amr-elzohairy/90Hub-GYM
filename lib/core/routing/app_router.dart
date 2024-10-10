@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:hubmaster/features/forgotpassword/ui/forgot_password_view.dart';
 import 'package:hubmaster/features/home/ui/home_view.dart';
-import 'package:hubmaster/features/login/ui/login.dart';
+import 'package:hubmaster/features/login/ui/login_view.dart';
 import 'package:hubmaster/features/on_boarding/ui/on_boarding_screen.dart';
 import 'package:hubmaster/features/signup/ui/sign_up_view.dart';
 import 'package:hubmaster/features/user_infos/ui/activity_level_selection.dart';

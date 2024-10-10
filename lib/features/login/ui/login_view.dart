@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hubmaster/core/helpers/spacing.dart';
 import 'package:hubmaster/core/routing/app_router.dart';
 import 'package:hubmaster/core/themes/app_colors.dart';
 import 'package:hubmaster/core/widgets/custom_button.dart';
@@ -51,7 +52,7 @@ class LoginView extends StatelessWidget {
                         ),
                         Center(
                           child: Padding(
-                            padding: const EdgeInsets.only(top: 150.0),
+                            padding: EdgeInsets.only(top: 150.0.h),
                             child: Text(
                               "Welcome back",
                               style: Theme.of(context)
@@ -66,12 +67,12 @@ class LoginView extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 32),
+                  verticalSpace(32),
                   CustomTextField(labelText: "Email"),
                   CustomTextField(labelText: "Password", isPassword: true),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 30.0, horizontal: 35),
+                    padding: EdgeInsets.symmetric(
+                        vertical: 30.0.h, horizontal: 35.w),
                     child: Align(
                       alignment: Alignment.centerRight,
                       child: GestureDetector(
@@ -89,7 +90,7 @@ class LoginView extends StatelessWidget {
                   ),
                   Padding(
                     padding:
-                        EdgeInsets.only(left: 200.w, right: 10.w, bottom: 20.h),
+                        EdgeInsets.only(bottom: 20.h, left: 210.w, right: 20.h),
                     child: CustomButton(
                         onPressed: () {
                           GoRouter.of(context).push(AppRouter.kHomeView);
@@ -99,7 +100,7 @@ class LoginView extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 30.0, top: 50),
+                padding: EdgeInsets.only(left: 30.w, top: 50.h),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.max,
@@ -120,9 +121,7 @@ class LoginView extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(
-                      width: 30,
-                    ),
+                    horizontalSpace(30),
                     GestureDetector(
                       child: Text(
                         "Sign up",
@@ -141,16 +140,17 @@ class LoginView extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(top: 30.0, right: 30),
                   child: Container(
-                    width: 75.0,
-                    height: 75.0,
+                    width: 75.0.w,
+                    height: 75.0.h,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(color: Colors.grey, width: 2.0),
                     ),
-                    child: const CircleAvatar(
-                      radius: 75.0,
+                    child: CircleAvatar(
+                      radius: 75.0.r,
                       backgroundColor: Colors.transparent,
-                      backgroundImage: AssetImage("assets/images/logo.png"),
+                      backgroundImage:
+                          const AssetImage("assets/images/logo.png"),
                     ),
                   ),
                 ),
