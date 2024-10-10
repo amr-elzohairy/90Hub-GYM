@@ -110,7 +110,7 @@ class _GoalSelectionState extends State<GoalSelection> {
                 ],
               ),
               verticalSpace(100),
-              const NextAndBackRow(route: AppRouter.kActivitySelection),
+              const NextAndBackRow(route: AppRouter.kLoginView),
             ],
           ),
         ),
