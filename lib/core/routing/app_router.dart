@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:hubmaster/features/forgotpassword/ui/forgot_password_view.dart';
 import 'package:hubmaster/features/home/logic/home_cubit/home_cubit.dart';
 import 'package:hubmaster/features/home/ui/home_view.dart';
+import 'package:hubmaster/features/insight/logic/cubit/insight_cubit.dart';
 import 'package:hubmaster/features/insight/ui/insight.dart';
 import 'package:hubmaster/features/login/ui/login.dart';
 import 'package:hubmaster/features/on_boarding/ui/on_boarding_screen.dart';
@@ -77,7 +78,10 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: kInsight,
-        builder: (context, state) => const Insight(),
+        builder: (context, state) => BlocProvider(
+          create: (context) => InsightCubit(),
+          child: Insight(),
+        ),
       ),
     ],
   );

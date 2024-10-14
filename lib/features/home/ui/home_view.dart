@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hubmaster/core/themes/app_colors.dart';
 import 'package:hubmaster/features/home/logic/home_cubit/home_cubit.dart';
 import 'package:hubmaster/features/home/ui/widgets/custom_bottom_navigation_bar.dart';
 import 'package:hubmaster/features/home/ui/widgets/home_view_body.dart';
