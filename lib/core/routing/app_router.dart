@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:hubmaster/features/forgotpassword/ui/forgot_password_view.dart';
 import 'package:hubmaster/features/home/logic/home_cubit/home_cubit.dart';
 import 'package:hubmaster/features/home/ui/home_view.dart';
+import 'package:hubmaster/features/insight/ui/insight.dart';
 import 'package:hubmaster/features/login/ui/login.dart';
 import 'package:hubmaster/features/on_boarding/ui/on_boarding_screen.dart';
 import 'package:hubmaster/features/signup/ui/sign_up_view.dart';
@@ -24,6 +25,7 @@ abstract class AppRouter {
   static const kHomeView = '/homeView';
   static const kSignUpView = '/signUpView';
   static const kForgotPassword = '/forgotPassword';
+  static const kInsight = '/insight';
   static final GoRouter router = GoRouter(
     routes: [
       GoRoute(
@@ -62,7 +64,7 @@ abstract class AppRouter {
         path: kHomeView,
         builder: (context, state) => BlocProvider(
           create: (context) => HomeCubit(),
-          child:  HomeView(),
+          child: HomeView(),
         ),
       ),
       GoRoute(
@@ -72,6 +74,10 @@ abstract class AppRouter {
       GoRoute(
         path: kForgotPassword,
         builder: (context, state) => const ForgotPasswordView(),
+      ),
+      GoRoute(
+        path: kInsight,
+        builder: (context, state) => const Insight(),
       ),
     ],
   );
