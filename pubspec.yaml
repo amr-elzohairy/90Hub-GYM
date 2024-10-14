@@ -31,6 +31,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.6
   flutter_launcher_icons: ^0.14.1
   flutter_native_splash: ^2.4.1
   flutter_screenutil: ^5.9.3
@@ -69,8 +70,12 @@ flutter:
     - family: IntegralCF
       fonts:
         - asset: assets/fonts/IntegralCF.ttf
-        
-  #         style: italic
+
+    #         style: italic
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-VariableFont_opsz,wght.ttf
+
     - family: OpenSans
       fonts:
         - asset: assets/fonts/OpenSans.ttf
