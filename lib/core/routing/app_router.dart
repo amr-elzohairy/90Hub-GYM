@@ -1,5 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hubmaster/features/community/ui/community_screen.dart';
 import 'package:hubmaster/features/forgotpassword/ui/forgot_password_view.dart';
 import 'package:hubmaster/features/home/logic/home_cubit/home_cubit.dart';
 import 'package:hubmaster/features/home/ui/home_view.dart';
@@ -27,6 +28,7 @@ abstract class AppRouter {
   static const kSignUpView = '/signUpView';
   static const kForgotPassword = '/forgotPassword';
   static const kInsight = '/insight';
+  static const kCommunity = '/community';
   static final GoRouter router = GoRouter(
     routes: [
       GoRoute(
@@ -80,7 +82,14 @@ abstract class AppRouter {
         path: kInsight,
         builder: (context, state) => BlocProvider(
           create: (context) => InsightCubit(),
-          child: Insight(),
+          child: const Insight(),
+        ),
+      ),
+      GoRoute(
+        path: kCommunity,
+        builder: (context, state) => BlocProvider(
+          create: (context) => InsightCubit(),
+          child: const CommunityScreen(),
         ),
       ),
     ],
