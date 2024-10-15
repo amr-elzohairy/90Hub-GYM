@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hubmaster/core/themes/app_colors.dart';
+import 'package:hubmaster/features/community/ui/widgets/custom_post_card.dart';
+
 
 class CommunityScreen extends StatelessWidget {
   const CommunityScreen({super.key});
@@ -31,7 +33,7 @@ class CommunityScreen extends StatelessWidget {
         ),
         actions: [
           Padding(
-            padding:  EdgeInsets.only(top: 5.h),
+            padding: EdgeInsets.only(top: 5.h),
             child: Row(
               children: [
                 IconButton(
@@ -41,11 +43,24 @@ class CommunityScreen extends StatelessWidget {
                 IconButton(
                   onPressed: () {},
                   icon: SvgPicture.asset("assets/svgs/Notification.svg"),
-                )
+                ),
               ],
             ),
           ),
         ],
+      ),
+      body: Padding(
+        padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 10.w),
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView.builder(
+                itemCount: 10,
+                itemBuilder: (context, index) => const CustomPostCard(),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
