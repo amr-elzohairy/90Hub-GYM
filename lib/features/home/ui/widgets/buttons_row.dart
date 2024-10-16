@@ -45,10 +45,9 @@ class ButtonsRow extends StatelessWidget {
                     child: Text(
                       "BreakFast",
                       style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                        fontSize: 14.sp,
-                        fontFamily: "Open sans",
-                        fontWeight: FontWeight.w400
-                      ),
+                          fontSize: 14.sp,
+                          fontFamily: "Open sans",
+                          fontWeight: FontWeight.w400),
                     ),
                   ),
                 ),
@@ -76,10 +75,9 @@ class ButtonsRow extends StatelessWidget {
                     child: Text(
                       "lunch",
                       style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                        fontSize: 14.sp,
-                        fontFamily: "Open sans",
-                        fontWeight: FontWeight.w400
-                      ),
+                          fontSize: 14.sp,
+                          fontFamily: "Open sans",
+                          fontWeight: FontWeight.w400),
                     ),
                   ),
                 ),
@@ -107,10 +105,9 @@ class ButtonsRow extends StatelessWidget {
                     child: Text(
                       "Dinner",
                       style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                        fontSize: 14.sp,
-                        fontFamily: "Open sans",
-                        fontWeight: FontWeight.w400
-                      ),
+                          fontSize: 14.sp,
+                          fontFamily: "Open sans",
+                          fontWeight: FontWeight.w400),
                     ),
                   ),
                 ),
