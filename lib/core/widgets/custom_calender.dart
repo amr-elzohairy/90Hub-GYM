@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hubmaster/core/helpers/spacing.dart';
@@ -5,6 +7,8 @@ import 'package:hubmaster/core/themes/app_colors.dart';
 import 'package:intl/intl.dart';
 
 class CustomCalender extends StatefulWidget {
+  const CustomCalender({super.key});
+
   @override
   _CustomCalenderState createState() => _CustomCalenderState();
 }
@@ -12,6 +16,28 @@ class CustomCalender extends StatefulWidget {
 class _CustomCalenderState extends State<CustomCalender> {
   DateTime selectedDate = DateTime.now();
   DateTime focusedDate = DateTime.now();
+  final ScrollController _scrollController = ScrollController();
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      scrollToCurrentDay();
+    });
+  }
+
+  // Method to scroll to the current day
+  void scrollToCurrentDay() {
+    final currentDay = DateTime.now().day;
+    // Calculate the scroll position based on the day index and item width (adjusted for margins)
+    double scrollPosition =
+        (currentDay - 1) * 58.w; // Approximate width including margin
+    _scrollController.animateTo(
+      scrollPosition,
+      duration: const Duration(seconds: 1),
+      curve: Curves.easeInOut,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +45,7 @@ class _CustomCalenderState extends State<CustomCalender> {
       height: 180.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
-        color: Color(0xff2C2C2E),
+        color: const Color(0xff2C2C2E),
       ),
       child: Column(
         children: [
@@ -66,15 +92,15 @@ class _CustomCalenderState extends State<CustomCalender> {
         DateTime(focusedDate.year, focusedDate.month + 1, 0).day;
 
     return SizedBox(
-      height: 100.h, // Adjust height to fit day name and number
+      height: 100.h,
       child: ListView.builder(
+        controller: _scrollController,
         scrollDirection: Axis.horizontal,
         itemCount: daysInMonth,
         itemBuilder: (context, index) {
           final day = index + 1;
           final date = DateTime(focusedDate.year, focusedDate.month, day);
-          final dayName =
-              DateFormat.E().format(date); // Get day name (Mon, Tue, etc.)
+          final dayName = DateFormat.E().format(date);
 
           return GestureDetector(
             onTap: () {
@@ -87,13 +113,12 @@ class _CustomCalenderState extends State<CustomCalender> {
                 borderRadius: BorderRadius.circular(24.r),
                 color: _getDayColor(date),
               ),
-              width: 60.w, // Width for each day item
+              width: 60.w, // Adjust this based on your desired width
               alignment: Alignment.center,
               margin: const EdgeInsets.all(4.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(),
                   Text(
                     dayName.substring(0, 1), // Show first letter of day name
                     style: TextStyle(
@@ -108,7 +133,6 @@ class _CustomCalenderState extends State<CustomCalender> {
                     width: 40.w,
                     height: 40.h,
                     decoration: const BoxDecoration(
-                      // color: _getDayColor(date),
                       shape: BoxShape.circle,
                     ),
                     child: Text(
@@ -141,5 +165,11 @@ class _CustomCalenderState extends State<CustomCalender> {
     } else {
       return const Color(0xff3A3A3C);
     }
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
   }
 }
