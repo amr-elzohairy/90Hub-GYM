@@ -20,15 +20,12 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: BlocConsumer<HomeCubit, HomeState>(
-        listener: (context, state) {
-        
-        },
+        listener: (context, state) {},
         builder: (context, state) {
           return Scaffold(
-              
-              body:pages[context.read<HomeCubit>().index],
-              bottomNavigationBar: const CustomBottomNavigationBar(),
-            );
+            body: pages[context.read<HomeCubit>().index],
+            bottomNavigationBar: const CustomBottomNavigationBar(),
+          );
         },
       ),
     );
