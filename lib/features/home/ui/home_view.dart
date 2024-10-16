@@ -5,6 +5,7 @@ import 'package:hubmaster/features/home/logic/home_cubit/home_cubit.dart';
 import 'package:hubmaster/features/home/ui/widgets/custom_bottom_navigation_bar.dart';
 import 'package:hubmaster/features/home/ui/widgets/home_view_body.dart';
 import 'package:hubmaster/features/insight/ui/insight.dart';
+import 'package:hubmaster/features/store_page/ui/store_page.dart';
 
 class HomeView extends StatelessWidget {
   HomeView({super.key});
@@ -12,6 +13,7 @@ class HomeView extends StatelessWidget {
     const HomeViewBody(),
     const Insight(),
     const CommunityScreen(),
+    const StorePage()
   ];
 
   @override

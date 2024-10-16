@@ -9,6 +9,7 @@ import 'package:hubmaster/features/insight/ui/insight.dart';
 import 'package:hubmaster/features/login/ui/login_view.dart';
 import 'package:hubmaster/features/on_boarding/ui/on_boarding_screen.dart';
 import 'package:hubmaster/features/signup/ui/sign_up_view.dart';
+import 'package:hubmaster/features/store_page/ui/store_page.dart';
 import 'package:hubmaster/features/user_infos/ui/activity_level_selection.dart';
 import 'package:hubmaster/features/user_infos/ui/age_selection.dart';
 import 'package:hubmaster/features/user_infos/ui/goal_selection.dart';
@@ -29,6 +30,7 @@ abstract class AppRouter {
   static const kForgotPassword = '/forgotPassword';
   static const kInsight = '/insight';
   static const kCommunity = '/community';
+  static const kStorePage = '/storePage';
   static final GoRouter router = GoRouter(
     routes: [
       GoRoute(
@@ -91,6 +93,10 @@ abstract class AppRouter {
           create: (context) => InsightCubit(),
           child: const CommunityScreen(),
         ),
+      ),
+      GoRoute(
+        path: kStorePage,
+        builder: (context, state) => const StorePage(),
       ),
     ],
   );

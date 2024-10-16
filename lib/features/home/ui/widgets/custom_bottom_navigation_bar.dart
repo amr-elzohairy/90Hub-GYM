@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hubmaster/features/home/logic/home_cubit/home_cubit.dart';
 
@@ -24,35 +25,61 @@ class CustomBottomNavigationBar extends StatelessWidget {
             currentIndex: context.read<HomeCubit>().index,
             items: [
               BottomNavigationBarItem(
-                activeIcon: SvgPicture.asset(
-                  'assets/svgs/Home.svg',
-                  color: Colors.white,
+                activeIcon: Padding(
+                  padding: EdgeInsets.only(top: 5.h),
+                  child: SvgPicture.asset(
+                    'assets/svgs/Home.svg',
+                    color: Colors.white,
+                  ),
                 ),
-                icon: SvgPicture.asset('assets/svgs/Home.svg'),
+                icon: Padding(
+                  padding: EdgeInsets.only(top: 5.h),
+                  child: SvgPicture.asset(
+                    'assets/svgs/Home.svg',
+                  ),
+                ),
                 label: '',
               ),
               BottomNavigationBarItem(
-                activeIcon: SvgPicture.asset(
-                  'assets/svgs/statics.svg',
-                  color: Colors.white,
+                activeIcon: Padding(
+                  padding: EdgeInsets.only(top: 5.h),
+                  child: SvgPicture.asset(
+                    'assets/svgs/statics.svg',
+                    color: Colors.white,
+                  ),
                 ),
-                icon: SvgPicture.asset('assets/svgs/statics.svg'),
+                icon: Padding(
+                  padding: EdgeInsets.only(top: 5.h),
+                  child: SvgPicture.asset('assets/svgs/statics.svg'),
+                ),
                 label: '',
               ),
               BottomNavigationBarItem(
-                activeIcon: SvgPicture.asset(
-                  'assets/svgs/community.svg',
-                  color: Colors.white,
+                activeIcon: Padding(
+                  padding: EdgeInsets.only(top: 5.h),
+                  child: SvgPicture.asset(
+                    'assets/svgs/community.svg',
+                    color: Colors.white,
+                  ),
                 ),
-                icon: SvgPicture.asset('assets/svgs/community.svg'),
+                icon: Padding(
+                  padding: EdgeInsets.only(top: 5.h),
+                  child: SvgPicture.asset('assets/svgs/community.svg'),
+                ),
                 label: '',
               ),
               BottomNavigationBarItem(
-                activeIcon: SvgPicture.asset(
-                  'assets/svgs/cart.svg',
-                  color: Colors.white,
+                activeIcon: Padding(
+                  padding: EdgeInsets.only(top: 5.h),
+                  child: SvgPicture.asset(
+                    'assets/svgs/cart.svg',
+                    color: Colors.white,
+                  ),
                 ),
-                icon: SvgPicture.asset('assets/svgs/cart.svg'),
+                icon: Padding(
+                  padding: EdgeInsets.only(top: 5.h),
+                  child: SvgPicture.asset('assets/svgs/cart.svg'),
+                ),
                 label: '',
               ),
             ],

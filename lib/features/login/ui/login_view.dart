@@ -21,7 +21,7 @@ class LoginView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.60,
+                    height: MediaQuery.of(context).size.height * 0.49,
                     child: Stack(
                       children: [
                         LayoutBuilder(
@@ -52,7 +52,7 @@ class LoginView extends StatelessWidget {
                         ),
                         Center(
                           child: Padding(
-                            padding: EdgeInsets.only(top: 150.0.h),
+                            padding: EdgeInsets.only(top: 50.0.h),
                             child: Text(
                               "Welcome back",
                               style: Theme.of(context)
@@ -67,7 +67,6 @@ class LoginView extends StatelessWidget {
                       ],
                     ),
                   ),
-                  verticalSpace(32),
                   CustomTextField(labelText: "Email"),
                   CustomTextField(labelText: "Password", isPassword: true),
                   Padding(
