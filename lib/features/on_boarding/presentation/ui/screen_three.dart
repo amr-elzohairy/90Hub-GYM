@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hubmaster/core/helpers/spacing.dart';
-import 'package:hubmaster/features/on_boarding/ui/widgets/bottom_bevel_clipper.dart';
+import 'package:hubmaster/core/routing/app_router.dart';
 
-class ScreenTwo extends StatelessWidget {
-  const ScreenTwo({super.key});
+import 'package:hubmaster/core/widgets/custom_button.dart';
+import 'package:hubmaster/features/on_boarding/presentation/ui/widgets/bottom_bevel_clipper.dart';
+
+class ScreenThree extends StatelessWidget {
+  const ScreenThree({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +27,7 @@ class ScreenTwo extends StatelessWidget {
                       child: ClipPath(
                         clipper: BottomBevelClipper(),
                         child: Image.asset(
-                          'assets/images/Rectangle 6 (1).png',
+                          'assets/images/Rectangle 6 (2).png',
                           fit: BoxFit.fill,
                         ),
                       ),
@@ -43,19 +48,22 @@ class ScreenTwo extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(
-            height: 100,
-          ),
+          verticalSpace(100),
           Text(
             textAlign: TextAlign.center,
-            'CREATE A WORKOUT PLAN\n TO STAY FIT',
+            'ACTION IS THE\nKEY TO ALL SUCCESS',
             style: Theme.of(context).textTheme.displayLarge,
           ),
-          verticalSpace(2),
-          // Text(
-          //   'TO STAY FIT',
-          //   style: TextStyles.font24BoldWhiteInter,
-          // ),
+          verticalSpace(60),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 100.h),
+            child: CustomButton(
+              onPressed: () {
+                GoRouter.of(context).push(AppRouter.kLoginView);
+              },
+              text: 'Start Now',
+            ),
+          ),
         ],
       ),
     );

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hubmaster/features/community/ui/community_screen.dart';
-import 'package:hubmaster/features/home/logic/home_cubit/home_cubit.dart';
-import 'package:hubmaster/features/home/ui/widgets/custom_bottom_navigation_bar.dart';
-import 'package:hubmaster/features/home/ui/widgets/home_view_body.dart';
-import 'package:hubmaster/features/insight/ui/insight.dart';
-import 'package:hubmaster/features/store_page/ui/store_page.dart';
+import 'package:hubmaster/features/community/presentation/ui/community_screen.dart';
+import 'package:hubmaster/features/home/presentation/logic/home_cubit/home_cubit.dart';
+import 'package:hubmaster/features/home/presentation/ui/widgets/custom_bottom_navigation_bar.dart';
+import 'package:hubmaster/features/home/presentation/ui/widgets/home_view_body.dart';
+import 'package:hubmaster/features/insight/presentation/ui/insight.dart';
+import 'package:hubmaster/features/store_page/presentation/ui/store_page.dart';
 
 class HomeView extends StatelessWidget {
   HomeView({super.key});

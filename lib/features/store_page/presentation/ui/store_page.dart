@@ -4,8 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hubmaster/core/helpers/spacing.dart';
 import 'package:hubmaster/core/themes/app_colors.dart';
 import 'package:hubmaster/core/widgets/custom_text_form_field.dart';
-import 'package:hubmaster/features/store_page/ui/widgets/nike_row.dart';
-import 'package:hubmaster/features/store_page/ui/widgets/store_page_list_item.dart';
+import 'package:hubmaster/features/store_page/presentation/ui/widgets/nike_row.dart';
+import 'package:hubmaster/features/store_page/presentation/ui/widgets/store_page_list_item.dart';
 
 class StorePage extends StatelessWidget {
   const StorePage({super.key});

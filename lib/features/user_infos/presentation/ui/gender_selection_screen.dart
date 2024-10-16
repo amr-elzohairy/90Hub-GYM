@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:hubmaster/core/helpers/spacing.dart';
 import 'package:hubmaster/core/routing/app_router.dart';
 import 'package:hubmaster/core/widgets/custom_button.dart';
-import 'package:hubmaster/features/user_infos/ui/widgets/gender_options.dart';
+import 'package:hubmaster/features/user_infos/presentation/ui/widgets/gender_options.dart';
 
 class GenderSelectionScreen extends StatefulWidget {
   const GenderSelectionScreen({super.key});

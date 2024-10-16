@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hubmaster/core/helpers/spacing.dart';
 import 'package:hubmaster/core/themes/app_colors.dart';
-import 'package:hubmaster/features/home/ui/widgets/buttons_row.dart';
+import 'package:hubmaster/features/home/presentation/ui/widgets/buttons_row.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({

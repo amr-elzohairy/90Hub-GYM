@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hubmaster/core/helpers/spacing.dart';
 import 'package:hubmaster/core/routing/app_router.dart';
-import 'package:hubmaster/features/user_infos/ui/widgets/next_and_back_row.dart';
-import 'package:hubmaster/features/user_infos/ui/widgets/weight_slider.dart';
+import 'package:hubmaster/features/user_infos/presentation/ui/widgets/next_and_back_row.dart';
+import 'package:hubmaster/features/user_infos/presentation/ui/widgets/weight_slider.dart';
 
 class WeightSelection extends StatelessWidget {
   const WeightSelection({super.key});

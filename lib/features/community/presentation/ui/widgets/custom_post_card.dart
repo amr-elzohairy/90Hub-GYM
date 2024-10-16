@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hubmaster/core/helpers/spacing.dart';
-import 'package:hubmaster/features/community/ui/widgets/90_hub_coach.dart';
-import 'package:hubmaster/features/community/ui/widgets/icons_row.dart';
+import 'package:hubmaster/features/community/presentation/ui/widgets/90_hub_coach.dart';
+import 'package:hubmaster/features/community/presentation/ui/widgets/icons_row.dart';
 
 class CustomPostCard extends StatelessWidget {
   const CustomPostCard({

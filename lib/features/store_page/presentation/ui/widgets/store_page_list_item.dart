@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hubmaster/features/store_page/ui/widgets/rating_stars.dart';
+import 'package:hubmaster/features/store_page/presentation/ui/widgets/rating_stars.dart';
 
 class StorePageListItem extends StatelessWidget {
   const StorePageListItem({

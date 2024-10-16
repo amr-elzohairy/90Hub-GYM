@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hubmaster/core/helpers/spacing.dart';
-import 'package:hubmaster/features/on_boarding/ui/screen_one.dart';
-import 'package:hubmaster/features/on_boarding/ui/screen_three.dart';
-import 'package:hubmaster/features/on_boarding/ui/screen_two.dart';
-import 'package:hubmaster/features/on_boarding/ui/widgets/custom_indicator.dart';
+import 'package:hubmaster/features/on_boarding/presentation/ui/screen_one.dart';
+import 'package:hubmaster/features/on_boarding/presentation/ui/screen_three.dart';
+import 'package:hubmaster/features/on_boarding/presentation/ui/screen_two.dart';
+import 'package:hubmaster/features/on_boarding/presentation/ui/widgets/custom_indicator.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   OnBoardingScreen({super.key});

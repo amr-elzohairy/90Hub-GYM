@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hubmaster/core/helpers/spacing.dart';
-import 'package:hubmaster/features/on_boarding/ui/widgets/bottom_bevel_clipper.dart';
+import 'package:hubmaster/features/on_boarding/presentation/ui/widgets/bottom_bevel_clipper.dart';
 
-class ScreenOne extends StatelessWidget {
-  const ScreenOne({super.key});
+class ScreenTwo extends StatelessWidget {
+  const ScreenTwo({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class ScreenOne extends StatelessWidget {
                       child: ClipPath(
                         clipper: BottomBevelClipper(),
                         child: Image.asset(
-                          'assets/images/Rectangle 6.png',
+                          'assets/images/Rectangle 6 (1).png',
                           fit: BoxFit.fill,
                         ),
                       ),
@@ -43,12 +43,19 @@ class ScreenOne extends StatelessWidget {
               ),
             ],
           ),
-          verticalSpace(100),
+          const SizedBox(
+            height: 100,
+          ),
           Text(
             textAlign: TextAlign.center,
-            'MEET YOUR COACH\nSTART YOUR JOURNEY',
+            'CREATE A WORKOUT PLAN\n TO STAY FIT',
             style: Theme.of(context).textTheme.displayLarge,
           ),
+          verticalSpace(2),
+          // Text(
+          //   'TO STAY FIT',
+          //   style: TextStyles.font24BoldWhiteInter,
+          // ),
         ],
       ),
     );
