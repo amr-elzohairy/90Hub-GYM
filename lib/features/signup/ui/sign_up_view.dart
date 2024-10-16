@@ -21,7 +21,7 @@ class SignUpView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.6,
+                    height: MediaQuery.of(context).size.height * 0.43,
                     child: Stack(
                       children: [
                         SizedBox(
@@ -77,12 +77,11 @@ class SignUpView extends StatelessWidget {
                       ],
                     ),
                   ),
-                  verticalSpace(32),
                   CustomTextField(labelText: "Email"),
                   CustomTextField(labelText: "Password", isPassword: true),
                   CustomTextField(
                       labelText: "Password again", isPassword: true),
-                  verticalSpace(50),
+                  verticalSpace(30),
                   Padding(
                     padding:
                         EdgeInsets.only(bottom: 20.h, left: 210.w, right: 20.h),
