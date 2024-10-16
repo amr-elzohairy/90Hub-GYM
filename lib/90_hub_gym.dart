@@ -33,7 +33,7 @@ class HubGym extends StatelessWidget {
                   color: Colors.white,
                   fontFamily: 'IntegralCF',
                 ),
-                displayLarge:  TextStyle(
+                displayLarge: TextStyle(
                   fontSize: 24.sp,
                   fontWeight: FontWeight.w500,
                   fontFamily: 'IntegralCF',
