@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hubmaster/core/helpers/spacing.dart';
 import 'package:hubmaster/core/themes/app_colors.dart';
+import 'package:hubmaster/features/home/ui/widgets/buttons_row.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({
@@ -12,58 +13,58 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-                backgroundColor: AppColors.scaffoldBgColor,
-                elevation: 0,
-                toolbarHeight: 60,
-                actions: [
-                  ClipOval(
-                    child: Material(
-                      color: Colors.transparent,
-                      child: InkWell(
-                        onTap: () {},
-                        child: Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Image.asset(
-                            "assets/images/chat.png",
-                            height: 35,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  ClipOval(
-                    child: Material(
-                      color: Colors.transparent,
-                      child: InkWell(
-                        onTap: () {},
-                        child: Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Image.asset(
-                            "assets/images/notification.png",
-                            height: 35,
-                          ),
-                        ),
-                      ),
-                    ),
-                  )
-                ],
-                leadingWidth: 90,
-                leading: ClipOval(
-                  child: Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      onTap: () {},
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Image.asset(
-                          "assets/images/dehazed.png",
-                          width: 30,
-                        ),
-                      ),
-                    ),
+        backgroundColor: AppColors.scaffoldBgColor,
+        elevation: 0,
+        toolbarHeight: 60,
+        actions: [
+          ClipOval(
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                onTap: () {},
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Image.asset(
+                    "assets/images/chat.png",
+                    height: 35,
                   ),
                 ),
               ),
+            ),
+          ),
+          ClipOval(
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                onTap: () {},
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Image.asset(
+                    "assets/images/notification.png",
+                    height: 35,
+                  ),
+                ),
+              ),
+            ),
+          )
+        ],
+        leadingWidth: 90,
+        leading: ClipOval(
+          child: Material(
+            color: Colors.transparent,
+            child: InkWell(
+              onTap: () {},
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Image.asset(
+                  "assets/images/dehazed.png",
+                  width: 30,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 27,
@@ -96,25 +97,19 @@ class HomeViewBody extends StatelessWidget {
                 children: [
                   Text(
                     "Today Workout Plan",
-                    style: Theme.of(context)
-                        .textTheme
-                        .displayMedium!
-                        .copyWith(
-                            fontSize: 17.sp,
-                            fontWeight: FontWeight.w700,
-                            fontFamily: 'Open Sans'),
+                    style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                        fontSize: 17.sp,
+                        fontWeight: FontWeight.w700,
+                        fontFamily: 'Open Sans'),
                   ),
                   GestureDetector(
                     child: Text(
                       "Custom Plan",
-                      style: Theme.of(context)
-                          .textTheme
-                          .displaySmall!
-                          .copyWith(
-                              color: AppColors.darkRed,
-                              fontSize: 13.sp,
-                              fontWeight: FontWeight.w400,
-                              fontFamily: 'Open Sans'),
+                      style: Theme.of(context).textTheme.displaySmall!.copyWith(
+                          color: AppColors.darkRed,
+                          fontSize: 13.sp,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: 'Open Sans'),
                     ),
                     onTap: () {},
                   ),
@@ -181,13 +176,10 @@ class HomeViewBody extends StatelessWidget {
                 children: [
                   Text(
                     "Today Nutrition Plan",
-                    style: Theme.of(context)
-                        .textTheme
-                        .displayMedium!
-                        .copyWith(
-                            fontSize: 17.sp,
-                            fontWeight: FontWeight.w700,
-                            fontFamily: 'Open Sans'),
+                    style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                        fontSize: 17.sp,
+                        fontWeight: FontWeight.w700,
+                        fontFamily: 'Open Sans'),
                   ),
                   GestureDetector(
                     child: Text(
@@ -208,56 +200,7 @@ class HomeViewBody extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20.0),
-                  color: const Color(0xFF2C2C2E),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Expanded(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20.0),
-                          color: const Color(0xFF951025),
-                        ),
-                        child: TextButton(
-                          onPressed: () {},
-                          child: Text("Breakfast",
-                              style: Theme.of(context).textTheme.labelSmall),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20.0),
-                          color: const Color(0xFF2C2C2E),
-                        ),
-                        child: TextButton(
-                          onPressed: () {},
-                          child: Text("Lunch",
-                              style: Theme.of(context).textTheme.labelSmall),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20.0),
-                          color: const Color(0xFF2C2C2E),
-                        ),
-                        child: TextButton(
-                          onPressed: () {},
-                          child: Text("Dinner",
-                              style: Theme.of(context).textTheme.labelSmall),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              const ButtonsRow(),
               verticalSpace(30),
               Card(
                 elevation: 4,
@@ -315,3 +258,4 @@ class HomeViewBody extends StatelessWidget {
     );
   }
 }
+
