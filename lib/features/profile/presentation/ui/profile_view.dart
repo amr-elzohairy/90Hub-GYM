@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hubmaster/core/helpers/spacing.dart';
 import 'package:hubmaster/core/themes/app_colors.dart';
+import 'package:hubmaster/features/profile/presentation/ui/widgets/profile_list_tile.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
@@ -186,42 +187,3 @@ class ProfileView extends StatelessWidget {
   }
 }
 
-class ProfileListTile extends StatelessWidget {
-  const ProfileListTile({
-    super.key,
-    required this.title,
-    required this.onPressed,
-  });
-  final String title;
-  final void Function()? onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ListTile(
-          trailing: IconButton(
-            onPressed: onPressed,
-            icon: const Icon(
-              Icons.arrow_forward_ios_outlined,
-              color: Color(0xffE5E5E5),
-              size: 22,
-            ),
-          ),
-          title: Text(
-            title,
-            style: Theme.of(context).textTheme.displayMedium!.copyWith(
-                fontSize: 17.sp,
-                fontWeight: FontWeight.w600,
-                fontFamily: "Open Sans"),
-          ),
-        ),
-        Container(
-          height: 1.h,
-          width: 300,
-          color: const Color(0xFF2C2C2E),
-        ),
-      ],
-    );
-  }
-}
