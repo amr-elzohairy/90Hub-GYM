@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hubmaster/core/helpers/spacing.dart';
+import 'package:hubmaster/core/routing/app_router.dart';
 import 'package:hubmaster/core/themes/app_colors.dart';
 import 'package:hubmaster/features/home/presentation/ui/widgets/buttons_row.dart';
 
@@ -52,8 +54,10 @@ class HomeViewBody extends StatelessWidget {
         leading: ClipOval(
           child: Material(
             color: Colors.transparent,
-            child: InkWell(
-              onTap: () {},
+            child: GestureDetector(
+              onTap: () {
+                GoRouter.of(context).push(AppRouter.kProfileView);
+              },
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Image.asset(
@@ -258,4 +262,3 @@ class HomeViewBody extends StatelessWidget {
     );
   }
 }
-

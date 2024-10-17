@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hubmaster/features/community/presentation/ui/community_screen.dart';
@@ -8,6 +9,7 @@ import 'package:hubmaster/features/insight/presentation/logic/cubit/insight_cubi
 import 'package:hubmaster/features/insight/presentation/ui/insight.dart';
 import 'package:hubmaster/features/login/presentation/ui/login_view.dart';
 import 'package:hubmaster/features/on_boarding/presentation/ui/on_boarding_screen.dart';
+import 'package:hubmaster/features/profile/presentation/ui/profile_view.dart';
 import 'package:hubmaster/features/signup/presentation/ui/sign_up_view.dart';
 import 'package:hubmaster/features/store_page/presentation/ui/store_page.dart';
 import 'package:hubmaster/features/user_infos/presentation/ui/activity_level_selection.dart';
@@ -31,6 +33,7 @@ abstract class AppRouter {
   static const kInsight = '/insight';
   static const kCommunity = '/community';
   static const kStorePage = '/storePage';
+  static const kProfileView = '/profileView';
   static final GoRouter router = GoRouter(
     routes: [
       GoRoute(
@@ -98,6 +101,25 @@ abstract class AppRouter {
         path: kStorePage,
         builder: (context, state) => const StorePage(),
       ),
+      GoRoute(
+          path: kProfileView,
+          pageBuilder: (context, state) {
+            return CustomTransitionPage(
+              transitionDuration: const Duration(milliseconds: 250),
+              child: const ProfileView(),
+              transitionsBuilder:
+                  (context, animation, secondaryAnimation, child) {
+                const begin = Offset(-1.0, 0.0);
+                const end = Offset.zero;
+                final tween = Tween(begin: begin, end: end);
+                final offsetAnimation = animation.drive(tween);
+                return SlideTransition(
+                  position: offsetAnimation,
+                  child: child,
+                );
+              },
+            );
+          }),
     ],
   );
 }
