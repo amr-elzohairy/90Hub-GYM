@@ -55,6 +55,7 @@ class CommunityScreen extends StatelessWidget {
           children: [
             Expanded(
               child: ListView.builder(
+                physics: const BouncingScrollPhysics(),
                 itemCount: 10,
                 itemBuilder: (context, index) => const CustomPostCard(),
               ),
